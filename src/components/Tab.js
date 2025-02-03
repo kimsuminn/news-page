@@ -15,7 +15,7 @@ function Tab() {
     { id: 1, name: 'top', btnText: 'Top' },
     { id: 2, name: 'sports', btnText: '스포츠' },
     { id: 3, name: 'technology', btnText: '기술' },
-    { id: 4, name: 'business', btnText: '사업' },
+    { id: 4, name: 'business', btnText: '경제' },
     { id: 5, name: 'science', btnText: '과학' },
     { id: 6, name: 'entertainment', btnText: '연예' },
     { id: 7, name: 'health', btnText: '건강' },
