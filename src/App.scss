@@ -1,0 +1,261 @@
+@font-face {
+  font-family: 'L';
+  src: url(../public/font/NanumSquareL.ttf);
+}
+
+@font-face {
+  font-family: 'R';
+  src: url(../public/font/NanumSquareR.ttf);
+}
+
+@font-face {
+  font-family: 'B';
+  src: url(../public/font/NanumSquareB.ttf);
+}
+
+@font-face {
+  font-family: 'EB';
+  src: url(../public/font/NanumSquareEB.ttf);
+}
+
+html {
+  font-size: 16px;
+  font-family: 'R';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+figure {
+  width: fit-content;
+  height: fit-content;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.App {
+  width: 100%;
+
+  // Tab
+  .tab {
+    width: 100%;
+
+    .tab_inner {
+      width: 100%;
+      max-width: 1400px;
+      margin: auto;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+
+      h1 {
+        font-family: 'EB';
+        color: rgb(48, 121, 255);
+        cursor: pointer;
+      }
+
+      & > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+  
+        li {
+          display: block;
+          border: 1px solid rgb(48, 121, 255);
+          border-radius: 1rem;
+          padding: 0.35rem 0.75rem;
+          font-size: clamp(0.75rem, 1vw, 1rem);
+          transition: .1s;
+          cursor: pointer;
+  
+          &.on {
+            background-color: rgb(48, 121, 255);
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .tab_inner {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+  }
+
+  // News
+  .news {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 1rem;
+    padding-bottom: 4rem;
+
+    & > figure {
+      width: 120px;
+      margin: 4rem auto;
+    }
+
+    .all {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .item {
+        width: calc((100% - 2rem) / 3);
+        background-color: rgb(240, 245, 255);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        figure {
+          width: 100%;
+          height: 280px;
+          border-radius: 0.5rem;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+          }
+        }
+
+        h2 {
+          font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+          color: #333;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .btn {
+          align-self: flex-end;
+          margin-top: 1rem;
+          
+          button {
+            font-family: 'R';
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            background-color: rgb(48, 121, 255);
+            color: #fff;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            transition: .1s;
+
+            &:hover {
+              background-color: rgb(104, 157, 255);
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .all {
+        .item {
+          width: calc((100% - 1rem) / 2);
+          flex-direction: column;
+        }
+      }
+    }
+
+    @media screen and (max-width: 680px) {
+      .all {
+        .item {
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .all {
+        .item {
+          figure {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  // Detail
+  .detail {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 1rem;
+
+    .item_box {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      margin-bottom: 4rem;
+
+      h2 {
+        line-height: 1.4;
+        margin: 1rem 0;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+
+        .url {
+          color: rgb(48, 121, 255);
+        }
+      }
+
+      figure {
+        width: 100%;
+        margin: 2rem 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .description {
+        p {
+          line-height: 1.5;
+          font-size: clamp(1rem, 1vw, 1.2rem);
+        }
+      }
+    }
+
+    @media screen and (max-width: 680px) {
+      .item_box {
+        .info {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
