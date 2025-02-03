@@ -10,7 +10,7 @@ function News() {
     <div className='news'>
       {
         newsState === 'loading' ?
-        <figure><img src="/image/loading.gif" alt="loading" /></figure> : 
+        <figure><img src={`${process.env.PUBLIC_URL}/loading.gif`} alt="loading" /></figure> : 
         <CardBox />
       }
     </div>
