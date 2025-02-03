@@ -38,7 +38,7 @@ function NewsDetail() {
               <></>
           }
         </div> :
-        <figure><img src="./image/loading.gif" alt="loading" /></figure>
+        <figure><img src="/image/loading.gif" alt="loading" /></figure>
       }
     </div>
   )

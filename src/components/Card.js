@@ -11,7 +11,7 @@ function Card({ item }) {
         {
           item.image_url ? 
           <img src={item.image_url} alt={item.article_id} /> :
-          <img src='./image/no_img.jpg' alt={item.article_id}/>
+          <img src='/image/no_img.jpg' alt={item.article_id}/>
         }
       </figure>
       <h2>{item.title}</h2>
